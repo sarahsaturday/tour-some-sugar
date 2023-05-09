@@ -82,41 +82,76 @@ const database = {
         genre: "Pop",
         yearFormed: 2006
     }],
-venues: [{
+    venues: [{
         id: 1,
         name: "The Roxy",
         address: "123 Main Street",
         sqFootage: 1200,
         maxOccupancy: 300
- },
- {
-    id: 2,
-    name: "The Viper Room",
-    address: "8852 Sunset Blvd",
-    sqFootage: 1000,
-    maxOccupancy: 250
-  },
-  {
-    id: 3,
-    name: "The Troubadour",
-    address: "9081 Santa Monica Blvd",
-    sqFootage: 1500,
-    maxOccupancy: 350
-  },
-  {
-    id: 4,
-    name: "The Whiskey A Go Go",
-    address: "8901 Sunset Blvd",
-    sqFootage: 1800,
-    maxOccupancy: 400
-  },
-  {
-    id: 5,
-    name: "The Greek Theatre",
-    address: "2700 N Vermont Ave",
-    sqFootage: 4000,
-    maxOccupancy: 500
-  }],
-bookings: 
+    },
+    {
+        id: 2,
+        name: "The Viper Room",
+        address: "8852 Sunset Blvd",
+        sqFootage: 1000,
+        maxOccupancy: 250
+    },
+    {
+        id: 3,
+        name: "The Troubadour",
+        address: "9081 Santa Monica Blvd",
+        sqFootage: 1500,
+        maxOccupancy: 350
+    },
+    {
+        id: 4,
+        name: "The Whiskey A Go Go",
+        address: "8901 Sunset Blvd",
+        sqFootage: 1800,
+        maxOccupancy: 400
+    },
+    {
+        id: 5,
+        name: "The Greek Theatre",
+        address: "2700 N Vermont Ave",
+        sqFootage: 4000,
+        maxOccupancy: 500
+    }],
+    bookings: [
+        { id: 1, date: "2/13/23", bandId: 4, venueId: 3 },
+        { id: 2, date: "6/1/23", bandId: 2, venueId: 5 },
+        { id: 3, date: "8/23/23", bandId: 11, venueId: 1 },
+        { id: 4, date: "1/12/23", bandId: 3, venueId: 5 },
+        { id: 5, date: "7/10/23", bandId: 6, venueId: 2 },
+        { id: 6, date: "5/5/23", bandId: 8, venueId: 5 },
+        { id: 7, date: "10/15/23", bandId: 1, venueId: 4 },
+        { id: 8, date: "9/20/23", bandId: 5, venueId: 3 },
+        { id: 9, date: "4/2/23", bandId: 2, venueId: 3 },
+        { id: 10, date: "3/7/23", bandId: 9, venueId: 1 },
+        { id: 11, date: "11/11/23", bandId: 4, venueId: 5 },
+        { id: 12, date: "1/12/23", bandId: 10, venueId: 5 },
+        { id: 13, date: "6/20/23", bandId: 3, venueId: 4 },
+        { id: 14, date: "4/30/23", bandId: 7, venueId: 2 },
+        { id: 15, date: "8/8/23", bandId: 1, venueId: 5 },
+        { id: 16, date: "9/15/23", bandId: 6, venueId: 2 }
+    ]
 
+}
+
+export const getBands = () => {
+    const bandsCopy = [...database.bands];
+    return bandsCopy
+    // You write the code for copying the array and returning it
+}
+
+export const getVenues = () => {
+    const venuesCopy = [...database.venues];
+    return venuesCopy
+    // You write the code for copying the array and returning it
+}
+
+export const getBookings = () => {
+    const bookingsCopy = [...database.bookings];
+    return bookingsCopy
+    // You write the code for copying the array and returning it
 }
